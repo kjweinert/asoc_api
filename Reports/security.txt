@@ -1,0 +1,43 @@
+
+/api/v4/Reports/Security/{scope}/{id}
+scope = application, scanid or scan execution
+
+To get a feel for the avalable odata strings use /api/v4/Issues/{scope}/{scopeId}
+Verify the the name values. These should work in the Odata filter.
+     "Language": "Secrets",
+      "Severity": "High",
+      "Status": "Open",
+
+
+OdataFilter can be an empty string to filter on nothing. i.e. return all records.
+Or have a valid Odata Filter in the form of "Name" eq 'value'",
+
+{
+  "OdataFilter": "",
+  "ApplyPolicies": "None",
+  "SelectPolicyIds": [
+    "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+  ],
+  "Configuration": {
+    "ReportFileType": "Pdf",
+    "Title": "string",
+    "Notes": "string",
+    "Locale": "string",
+    "Summary": true,
+    "Details": true,
+    "Discussion": true,
+    "Overview": true,
+    "TableOfContent": true,
+    "Advisories": true,
+    "FixRecommendation": true,
+    "History": true,
+    "Coverage": true,
+    "MinimizeDetails": true,
+    "Articles": true
+  }
+}
+Odata Filter tested and working
+"OdataFilter": "IssueType eq 'Authentication.Credentials.Unprotected'",
+"OdataFilter": "Severity eq 'High'",
+OdataFilter": "IssueType eq 'Authentication.Credentials.Unprotected' and Severity eq 'High'",
+Note these work in swagger, but the curl example has a lot more quoting. So probably want to use that for actual scripting.

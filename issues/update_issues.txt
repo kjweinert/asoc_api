@@ -1,0 +1,30 @@
+PUT /api/v4/Issues/{scope}/{scopeId} (update filtered issues)
+
+curl -X 'PUT' \
+  'https://cloud.appscan.com/api/v4/Issues/Application/bc5951db-9d71-4140-90d0-d6b739f11992?odataFilter=DateCreated%20eq%20LastUpdated%20and%20Status%20eq%20%27Open%27&applyPolicies=None' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer h_E895Oj5p5hTQTBTPWa6TGluZEPKx0k' \
+  -H 'Content-Type: application/json' \
+  -d '{
+
+  "Severity": "Medium",
+  "Comment": "API generated Comment"
+}'
+Request URL
+
+
+What to look for:
+
+Open issues that have the same create and last update date. 
+Implying that they are still in new.
+OData:
+DateCreated eq LastUpdated and Status eq 'Open'
+
+What to update:
+# New issue data
+
+{
+
+  "Severity": "Medium",
+  "Comment": "API generated Comment"
+}

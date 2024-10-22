@@ -1,0 +1,8 @@
+GET /api/v4/Issues/{scope}/{scopeId} (get filtered issues)
+
+curl -X 'GET' \
+  'https://cloud.appscan.com/api/v4/Issues/ScanExecution/2dfdcb95-3fa4-40fd-8293-fda3f169d585?applyPolicies=None&%24top=100&%24filter=IsNewInScope&%24count=false' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer h_E895Oj5p5hTQTBTPWa6TGluZEPKx0k'
+
+IsNewInScope eq true

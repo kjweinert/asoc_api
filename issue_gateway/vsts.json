@@ -1,4 +1,6 @@
+,,,
 Maps issues from asoc to bugs in Devops
+,,,
 
 {
   "appscanData": {
@@ -26,6 +28,7 @@ Maps issues from asoc to bugs in Devops
   }
 }
 
+,,,
 Curl Example of the same
 curl -X 'POST' \
   'http://localhost:8080/v2/issues/pushjobs' \
@@ -36,7 +39,19 @@ curl -X 'POST' \
 <snip>
         "Informational": "4 - Low"
       }
+
+
+    
     }
   }
 }'        
 
+
+Issue type Issue
+      "issuetype": "Issue",
+      "prioritymap": {
+        "High": "1",
+        "Medium": "2",
+        "Low": "3",
+        "Informational": "4"
+,,,

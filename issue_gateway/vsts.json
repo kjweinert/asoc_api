@@ -1,0 +1,42 @@
+Maps issues from asoc to bugs in Devops
+
+{
+  "appscanData": {
+    "appscanProvider":"ASOC",
+    "url": "https://cloud.appscan.com",
+    "apikeyid": "e92b0555--849c036bc945",
+    "apikeysecret": "UbKjE5y--Yv9lZWaXEIcR7M",
+    "appid": "bc5951db-d6b739f11992",
+    "issuestates": "Open",
+    "maxissues": 10
+  },
+  "imData": {
+    "provider": "vsts",
+    "config": {
+      "url": "https://dev.azure.com/karlweinert/MvcMovieYaml",
+      "apiKey": "CkTMTch4---AASAZDOdlir",
+      "issuetype": "Bug",
+      "severitymap": {
+        "High": "1 - Critical",
+        "Medium": "2 - High",
+        "Low": "3 - Medium",
+        "Informational": "4 - Low"
+      }
+    }
+  }
+}
+
+Curl Example of the same
+curl -X 'POST' \
+  'http://localhost:8080/v2/issues/pushjobs' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "appscanData": {
+<snip>
+        "Informational": "4 - Low"
+      }
+    }
+  }
+}'        
+

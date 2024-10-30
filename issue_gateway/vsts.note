@@ -1,14 +1,12 @@
-,,,
 Maps issues from asoc to bugs in Devops
-,,,
 
 {
   "appscanData": {
     "appscanProvider":"ASOC",
     "url": "https://cloud.appscan.com",
-    "apikeyid": "e92b0555--849c036bc945",
-    "apikeysecret": "UbKjE5y--Yv9lZWaXEIcR7M",
-    "appid": "bc5951db-d6b739f11992",
+    "apikeyid": "% asoc API Key %",
+    "apikeysecret": "% asoc API Key Secret",
+    "appid": "% asoc App ID %",
     "issuestates": "Open",
     "maxissues": 10
   },
@@ -16,7 +14,7 @@ Maps issues from asoc to bugs in Devops
     "provider": "vsts",
     "config": {
       "url": "https://dev.azure.com/karlweinert/MvcMovieYaml",
-      "apiKey": "CkTMTch4---AASAZDOdlir",
+      "apiKey": "% vsts API Key %",
       "issuetype": "Bug",
       "severitymap": {
         "High": "1 - Critical",
@@ -27,31 +25,4 @@ Maps issues from asoc to bugs in Devops
     }
   }
 }
-
-,,,
-Curl Example of the same
-curl -X 'POST' \
-  'http://localhost:8080/v2/issues/pushjobs' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "appscanData": {
-<snip>
-        "Informational": "4 - Low"
-      }
-
-
-    
-    }
-  }
-}'        
-
-
-Issue type Issue
-      "issuetype": "Issue",
-      "prioritymap": {
-        "High": "1",
-        "Medium": "2",
-        "Low": "3",
-        "Informational": "4"
-,,,
+        

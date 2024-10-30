@@ -1,0 +1,41 @@
+Note that API key is different than a token
+API key requires username and the very long API key
+token works stand alone.
+My personal jira account uses the API where my work ones use a token.
+To use the token option remove username and password otions and replace with just token ("token": "the token")
+
+{
+  "appscanData": {
+    "appscanProvider":"ASOC",
+    "url": "https://cloud.appscan.com",
+    "apikeyid": "% API Key %",
+    "apikeysecret": "% Key Secrete %",
+    "appid": "% AppID %",
+    "issuestates": "Open",
+    "maxissues": 10
+  },
+  "imData": {
+    "provider": "jira",
+    "config": {
+      "url": "https://hclappscansecurity.atlassian.net",
+      "username": "% EMAIL %",
+      "password": "% API Token %",
+      "projectkey": "IG",
+      "issuetype": "Bug",
+      "summary": "Security issue: %IssueType% found by %Scanner%.",
+      "severityfield": "priority",
+      "severitymap": {
+        "High": "High",
+        "Medium": "Medium",
+        "Low": "Low",
+        "Informational": "Lowest"
+      },
+      "otherfields": {
+        "labels": [
+          "appscan",
+          "security"
+        ]
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
 PUT /api/v4/Issues/{scope}/{scopeId} (update filtered issues)
+Note the odata is in the URL for issue updates
+
+----------------
+There is no longer a new status in ASoC.
+Find issues that have the same create and last update date, implying that they are still in new.
 
 curl -X 'PUT' \
   'https://cloud.appscan.com/api/v4/Issues/Application/bc5951db-9d71-4140-90d0-d6b739f11992?odataFilter=DateCreated%20eq%20LastUpdated%20and%20Status%20eq%20%27Open%27&applyPolicies=None' \
@@ -10,21 +15,41 @@ curl -X 'PUT' \
   "Severity": "Medium",
   "Comment": "API generated Comment"
 }'
-Request URL
 
-
-What to look for:
-
-Open issues that have the same create and last update date. 
-Implying that they are still in new.
 OData:
 DateCreated eq LastUpdated and Status eq 'Open'
 
-What to update:
+What was updated:
 # New issue data
-
 {
-
   "Severity": "Medium",
   "Comment": "API generated Comment"
+}
+
+------------------
+When a record gets imported into Jira the Extrnal ID is set to the Jira Ticket ID's short name.
+This prevents it from getting imported to Jira a second time.
+
+Setting the External ID of an issue previously imported into Jira back to an empty string should allow it to be imported again.
+
+Filtered on specific ExternalID. Generally you would want to cast a wider net.
+
+curl -X 'PUT' \
+  'https://cloud.appscan.com/api/v4/Issues/Application/bc5951db-9d71-4140-90d0-d6b739f11992?odataFilter=ExternalId%20eq%20%27HCLJCI-99%27&applyPolicies=None' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer Wih9vMFJTvklSg5B3RTFxNgxLqcXaZca' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "ExternalId": "",
+  "Status": "Open",
+  "Comment": "string a ding ding"
+}'
+
+OData:
+  ExternalId eq 'HCLJCI-99'
+What was updated
+'{
+  "ExternalId": "",
+  "Status": "Open",
+  "Comment": "string a ding ding"
 }

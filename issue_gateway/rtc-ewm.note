@@ -1,1 +1,24 @@
-
+{
+  "appscanData": {
+    "appscanProvider":"ASOC",
+    "url": "https://cloud.appscan.com",
+    "apikeyid": "e92b0555-849c036bc945",
+    "apikeysecret": "UbKj-XEIcR7M",
+    "appid": "bc5951db-d6b739f11992",
+    "issuestates": "Open",
+    "maxissues": 10
+  },
+  "imData": {
+    "provider": "rtc",
+    "config": {
+      "url": "https://server.homew.com:9443/ccm",
+      "username": "snuggly_skunk",
+      "password": "Cy",
+      "projectarea": "Bionic Bat",
+      "issuetype": "defect",
+      "otherfields": {
+        "filedAgainst": "SoulootionTrain2"
+      }
+    }
+  }
+}

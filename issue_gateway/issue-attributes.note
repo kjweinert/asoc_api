@@ -1,0 +1,70 @@
+List of issue attributes (for use with appscan issue gateway)
+(single line list at the bottom)
+--------------------------------
+
+Id: %Id%
+Language: %Language% %Language%
+Severity: %Severity%
+Status: %Status%
+IssueType: %IssueType%
+Location: %Location%
+DateCreated: %DateCreated%
+LastUpdated: %LastUpdated%
+LastFound: %LastFound%
+CallingMethod: %CallingMethod%
+IsNewInScope: %IsNewInScope%
+PackageId: %PackageId%
+AppPackageId: %AppPackageId%
+LibraryName: %LibraryName%
+LibraryVersion: %LibraryVersion%
+ScaTechnology: %ScaTechnology%
+FGStatus: %FGStatus%
+IsSticky: %IsSticky%
+AsmHash: %AsmHash%
+HashVersion: %HashVersion%
+ApplicationId: %ApplicationId%
+FixGroupId: %FixGroupId%
+Api: %Api%
+Source: %Source%
+Context: %Context%
+AppscanVulnId: %AppscanVulnId%
+CallingLine: %CallingLine%
+Class: %Class%
+Cve: %Cve%
+CveId: %CveId%
+CvePublishDate: %CvePublishDate%
+DetailsUrl: %DetailsUrl%
+Cvss: %Cvss%
+CvssVersion: %CvssVersion%
+DiscoveryMethod: %DiscoveryMethod%
+Domain: %Domain%
+Element: %Element%
+ElementType: %ElementType%
+ExternalId: %ExternalId%
+Host: %Host%
+IssueTypeId: %IssueTypeId%
+IssueTypeGuid: %IssueTypeGuid%
+IssueXml: %IssueXml%
+Line: %Line%
+Package: %Package%
+Path: %Path%
+Port: %Port%
+Scheme: %Scheme%
+SeverityValue: %SeverityValue%
+CorrelationGroupId: %CorrelationGroupId%
+SourceFile: %SourceFile%
+LastComment: %LastComment%
+Scanner: %Scanner%
+ScanName: %ScanName%
+Cwe: %Cwe%
+ThreatClassId: %ThreatClassId%
+DiffResult: %DiffResult%
+ApiVulnName: %ApiVulnName%
+RemediationId: %RemediationId%
+SourceFileUri: %SourceFileUri%
+
+
+
+List ready to paste into json:
+"Id: %Id% \nLanguage: %Language% %Language% \nSeverity: %Severity% \nStatus: %Status% \nIssueType: %IssueType% \nLocation: %Location% \nDateCreated: %DateCreated% \nLastUpdated: %LastUpdated% \nLastFound: %LastFound% \nCallingMethod: %CallingMethod% \nIsNewInScope: %IsNewInScope% \nPackageId: %PackageId% \nAppPackageId: %AppPackageId% \nLibraryName: %LibraryName% \nLibraryVersion: %LibraryVersion% \nScaTechnology: %ScaTechnology% \nFGStatus: %FGStatus% \nIsSticky: %IsSticky% \nAsmHash: %AsmHash% \nHashVersion: %HashVersion% \nApplicationId: %ApplicationId% \nFixGroupId: %FixGroupId% \nApi: %Api% \nSource: %Source% \nContext: %Context% \nAppscanVulnId: %AppscanVulnId% \nCallingLine: %CallingLine% \nClass: %Class% \nCve: %Cve% \nCveId: %CveId% \nCvePublishDate: %CvePublishDate% \nDetailsUrl: %DetailsUrl% \nCvss: %Cvss% \nCvssVersion: %CvssVersion% \nDiscoveryMethod: %DiscoveryMethod% \nDomain: %Domain% \nElement: %Element% \nElementType: %ElementType% \nExternalId: %ExternalId% \nHost: %Host% \nIssueTypeId: %IssueTypeId% \nIssueTypeGuid: %IssueTypeGuid% \nIssueXml: %IssueXml% \nLine: %Line% \nPackage: %Package% \nPath: %Path% \nPort: %Port% \nScheme: %Scheme% \nSeverityValue: %SeverityValue% \nCorrelationGroupId: %CorrelationGroupId% \nSourceFile: %SourceFile% \nLastComment: %LastComment% \nScanner: %Scanner% \nScanName: %ScanName% \nCwe: %Cwe% \nThreatClassId: %ThreatClassId% \nDiffResult: %DiffResult% \nApiVulnName: %ApiVulnName% \nRemediationId: %RemediationId% \nSourceFileUri: %SourceFileUri% \n"
+
